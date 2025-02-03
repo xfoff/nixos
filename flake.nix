@@ -5,11 +5,7 @@
       home-manager.url = "github:nix-community/home-manager";
       rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
       nixvim.url = "github:nix-community/nixvim/nixos-24.11";
-<<<<<<< HEAD
-      zen-browser.url = "github:MarceColl/zen-browser-flake";
-=======
       zen-browser.url = "github:0xc000022070/zen-browser-flake";
->>>>>>> 107c091 (added all the goodies)
   };
 
   outputs = { nixpkgs, self, ... } @inputs:
@@ -29,12 +25,9 @@
       pkgs = import nixpkgs {
           inherit system;
           config.allowUnfree = true;
-<<<<<<< HEAD
-=======
           config.permittedInsecurePackages = [
             "dotnet-sdk-6.0.428"
           ];
->>>>>>> 107c091 (added all the goodies)
       };
       specialArgs = { inherit inputs system user-inputs; };
     };

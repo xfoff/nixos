@@ -84,11 +84,7 @@
     easyeffects
     zulu
     nix-prefetch
-<<<<<<< HEAD
-    inputs.zen-browser.packages.${pkgs.system}.specific
-=======
     inputs.zen-browser.packages.${pkgs.system}.twilight
->>>>>>> 107c091 (added all the goodies)
     #add new packages above
   ];
 
