@@ -24,14 +24,11 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
-<<<<<<< HEAD
   fileSystems."/media/disk" =
-    { device = "/dev/disk/by-uuid/0fea6ef1-2713-46e4-94ca-4db464f521bc";
+    { device = "/dev/disk/by-uuid/93ca5295-3e78-4da2-a99a-9b3364c6d461";
       fsType = "ext4";
     };
 
-=======
->>>>>>> 107c091 (added all the goodies)
   swapDevices =
     [ { device = "/dev/disk/by-uuid/c437854c-8489-4177-9f88-bb8fa054e01c"; }
     ];
@@ -42,11 +39,8 @@
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp39s0.useDHCP = lib.mkDefault true;
-<<<<<<< HEAD
   # networking.interfaces.vmnet1.useDHCP = lib.mkDefault true;
   # networking.interfaces.vmnet8.useDHCP = lib.mkDefault true;
-=======
->>>>>>> 107c091 (added all the goodies)
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
