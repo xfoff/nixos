@@ -89,10 +89,20 @@
   ];
 
   #virtualbox
+  programs.virt-manager.enable = true;
   virtualisation = {
+    libvirtd = {
+      enable = true;
+      nss.enable = true;
+      nss.enableGuest = true;
+      qemu = {
+        swtpm.enable = true;
+        runAsRoot = true;
+        ovmf.enable = true;
+        vhostUserPackages = [ pkgs.virtiofsd ];
+      };
+    };
     spiceUSBRedirection.enable = true;
-    vmware.host.enable = true;
-    vmware.guest.enable = true;
   };
 
   programs.zsh.enable = true;
