@@ -18,7 +18,6 @@
 
   services.xserver.xkb = {
     layout = "us";
-    options = "caps:Escape";
   };
 
   fonts.fontconfig.hinting.enable = true;

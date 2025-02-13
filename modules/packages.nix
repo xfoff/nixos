@@ -75,7 +75,6 @@
     spice
     spice-gtk
     spice-protocol
-    modrinth-app
     nss_latest
     waypipe
     #(import ../home/Apps/curseforge.nix { inherit pkgs steam-run unzip; })
@@ -85,6 +84,7 @@
     zulu
     nix-prefetch
     inputs.zen-browser.packages.${pkgs.system}.twilight
+    ollama-cuda
     #add new packages above
   ];
 
