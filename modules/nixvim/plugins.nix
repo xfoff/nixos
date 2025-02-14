@@ -73,8 +73,14 @@
           package = (import ./language-servers/gdshader.nix {inherit pkgs lib; });
           filetypes = [ "gdshader" ];
         };
-        html.enable = true;
-        jsonls.enable = true;
+        html = {
+          enable = true;
+          filetypes = [ "html" "tsx" "jsx" ];
+        };
+        jsonls = {
+          enable = true;
+          filetypes = [ "json" "conf" ];
+        };
         lua_ls.enable = true;
         nixd.enable = true;
         pyright.enable = true;
@@ -317,4 +323,16 @@
 
     ts-autotag.enable = true;
   };
+
+  extraPlugins = [
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "smear-cursor";
+      src = pkgs.fetchFromGitHub {
+        owner = "sphamba";
+        repo = "smear-cursor.nvim";
+        rev = "4b7334a09cd2434e73588cc0ea63e71177251249";
+        hash = "sha256-2ewfzlqYUjUYfCcOOP3CQclW/eIIzgk0TrFxbcrUaqs=";
+      };
+    })
+  ];
 }
