@@ -1,10 +1,10 @@
-{self, pkgs, lib, ...}:
+{self, inputs, pkgs, lib, ...}:
 {
   plugins = {
     treesitter = {
       enable = true;
 
-      grammarPackages = with pkgs.vimPlugins.nvim-treesitter-parsers; [
+      grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
         c
         cpp
         lua
@@ -30,6 +30,7 @@
         gdscript
         gdshader
         markdown
+        hyprlang
         typescript
         javascript
         ssh_config
@@ -45,6 +46,59 @@
           enable = true;
           additional_vim_regex_highlighting = true;
         };
+
+        indent.enable = true;
+      };
+
+      luaConfig.post = ''
+        do
+          local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+
+          parser_config.hyprlang = {
+            filetype = "*%hyprland%*",
+          }
+
+          vim.filetype.add {
+            pattern = {
+              ['.*/kitty/*.conf'] = 'bash',
+              ['.*/hypr/.*%.conf'] = 'hyprlang',
+            },
+          }
+        end
+      '';
+    };
+
+    treesitter-context = {
+      enable = true;
+
+      settings = {
+        line_numbers = true;
+        max_lines = 3;
+        min_window_height = 0;
+        mode = "cursor";
+        multiline_threshold = 20;
+        separator = "-";
+        trim_scope = "inner";
+        zindex = 20;
+      };
+    };
+
+    treesitter-textobjects = {
+      enable = true;
+
+      select = {
+        enable = true;
+        lookahead = true;
+      };
+
+      move = {
+        enable = true;
+        setJumps = true;
+      };
+
+      lspInterop = {
+        enable = true;
+        border = "rounded";
       };
     };
 
@@ -77,10 +131,7 @@
           enable = true;
           filetypes = [ "html" "tsx" "jsx" ];
         };
-        jsonls = {
-          enable = true;
-          filetypes = [ "json" "conf" ];
-        };
+        jsonls.enable = true;
         lua_ls.enable = true;
         nixd.enable = true;
         pyright.enable = true;
@@ -90,6 +141,11 @@
           installRustc = true;
         };
         ts_ls.enable = true;
+        hyprls = {
+          enable = true;
+          package = pkgs.hyprls;
+          filetypes = [ "conf" ];
+        };
       };
     };
 

@@ -85,6 +85,7 @@
     nix-prefetch
     inputs.zen-browser.packages.${pkgs.system}.twilight
     ollama-cuda
+    inputs.hyprls.packages.${pkgs.system}.default
     #add new packages above
   ];
 
