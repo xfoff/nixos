@@ -86,8 +86,11 @@
     inputs.zen-browser.packages.${pkgs.system}.twilight
     ollama-cuda
     inputs.hyprls.packages.${pkgs.system}.default
+    killall
     #add new packages above
   ];
+
+
 
   #virtualbox
   programs.virt-manager.enable = true;
@@ -104,6 +107,7 @@
       };
     };
     spiceUSBRedirection.enable = true;
+    waydroid.enable = true;
   };
 
   programs.zsh.enable = true;

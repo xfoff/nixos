@@ -134,7 +134,6 @@
         jsonls.enable = true;
         lua_ls.enable = true;
         nixd.enable = true;
-        pyright.enable = true;
         rust_analyzer = {
           enable = true;
           installCargo = true;
@@ -145,6 +144,31 @@
           enable = true;
           package = pkgs.hyprls;
           filetypes = [ "conf" ];
+        };
+        pylsp = {
+          enable = true;
+          settings.plugins = {
+            jedi_completion = {
+              enable = true;
+              fuzzy = true;
+              include_function_objects = true;
+              include_params = true;
+            };
+            jedi_definition = {
+              enable = true;
+              follow_builtin_definitions = true;
+              follow_builtin_imports = true;
+              follow_imports = true;
+            };
+            jedi_hover.enable = true;
+            jedi_references.enable = true;
+            jedi_signature_help.enable = true;
+            jedi_symbols = {
+              enable = true;
+              all_scopes = true;
+              include_import_symbols = true;
+            };
+          };
         };
       };
     };
@@ -381,14 +405,5 @@
   };
 
   extraPlugins = [
-    (pkgs.vimUtils.buildVimPlugin {
-      name = "smear-cursor";
-      src = pkgs.fetchFromGitHub {
-        owner = "sphamba";
-        repo = "smear-cursor.nvim";
-        rev = "4b7334a09cd2434e73588cc0ea63e71177251249";
-        hash = "sha256-2ewfzlqYUjUYfCcOOP3CQclW/eIIzgk0TrFxbcrUaqs=";
-      };
-    })
   ];
 }
