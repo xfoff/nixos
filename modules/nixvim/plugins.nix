@@ -168,6 +168,16 @@
               all_scopes = true;
               include_import_symbols = true;
             };
+
+            flake8.enable = true;
+            pylsp_mypy = {
+              enable = true;
+              dmypy = true;
+            };
+            black = {
+              enable = true;
+              preview = true;
+            };
           };
         };
       };

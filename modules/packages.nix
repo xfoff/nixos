@@ -87,6 +87,7 @@
     ollama-cuda
     inputs.hyprls.packages.${pkgs.system}.default
     killall
+    inotify-tools
     #add new packages above
   ];
 
