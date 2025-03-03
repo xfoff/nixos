@@ -145,41 +145,7 @@
           package = pkgs.hyprls;
           filetypes = [ "conf" ];
         };
-        pylsp = {
-          enable = true;
-          settings.plugins = {
-            jedi_completion = {
-              enable = true;
-              fuzzy = true;
-              include_function_objects = true;
-              include_params = true;
-            };
-            jedi_definition = {
-              enable = true;
-              follow_builtin_definitions = true;
-              follow_builtin_imports = true;
-              follow_imports = true;
-            };
-            jedi_hover.enable = true;
-            jedi_references.enable = true;
-            jedi_signature_help.enable = true;
-            jedi_symbols = {
-              enable = true;
-              all_scopes = true;
-              include_import_symbols = true;
-            };
-
-            flake8.enable = true;
-            pylsp_mypy = {
-              enable = true;
-              dmypy = true;
-            };
-            black = {
-              enable = true;
-              preview = true;
-            };
-          };
-        };
+        pyright.enable = true;
       };
     };
 
