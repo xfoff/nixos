@@ -15,7 +15,7 @@
     neovim
     unzip
     gcc
-    nodejs_22
+    nodejs_23
     eww
     cbonsai
     python3
@@ -38,7 +38,6 @@
     rofi-wayland
     libGLU
     libGL
-    python3
     glfw
     steam-run
     exercism
@@ -48,6 +47,7 @@
     jetbrains-toolbox
     mpv
     cmake
+    gnumake
     cargo
     scons
     hyprwayland-scanner
@@ -88,6 +88,8 @@
     inputs.hyprls.packages.${pkgs.system}.default
     killall
     inotify-tools
+    android-studio
+    polkit_gnome
     #add new packages above
   ];
 

@@ -23,5 +23,6 @@
     users = {
       xfof = import ../home/home.nix;
     };
+    backupFileExtension = "backup";
   };
 }
