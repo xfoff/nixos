@@ -88,8 +88,9 @@
     inputs.hyprls.packages.${pkgs.system}.default
     killall
     inotify-tools
-    android-studio
     polkit_gnome
+    unstable.vintagestory
+    icu
     #add new packages above
   ];
 

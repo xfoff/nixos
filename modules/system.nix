@@ -14,6 +14,7 @@
     };
   };
 
+  programs.nix-ld.enable = true;
   time.timeZone = "Europe/Warsaw";
   system.stateVersion = "24.11";
 }
