@@ -68,7 +68,7 @@
     nix-prefetch-git
     eog
     meslo-lgs-nf
-    godot_4-mono
+    unstable.godot_4-mono
     gnome-themes-extra
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
@@ -90,7 +90,8 @@
     inotify-tools
     polkit_gnome
     unstable.vintagestory
-    icu
+    unstable.icu
+    meld
     #add new packages above
   ];
 

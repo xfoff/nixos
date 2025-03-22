@@ -168,23 +168,21 @@
         ''nix-shell ~/.config/fabric/shell.nix --run "python ~/.config/fabric/bar/bar.py"''
       ];
 
-      windowrule = (
+      windowrulev2 = [
+        "noblur, fullscreen:1"
+        "nodim, fullscreen:1"
+        "opaque, fullscreen:1"
+      ] ++ (
         builtins.concatLists (builtins.map (app:
           [
             "noblur, title:(${app})"
             "nodim, title:(${app})"
             "opaque, title:(${app})"
+            "idleinhibit fullscreen, class:(${app})"
+            "renderunfocused, class:(${app})"
           ]
-        ) ["Zen" "Discord" "rofi"])
+        ) ["Zen" "Discord" "rofi" "steam_app" "Godot"])
       );
-
-      windowrulev2 = [
-        "noblur, fullscreen:1"
-        "nodim, fullscreen:1"
-        "opaque, fullscreen:1"
-        "idleinhibit fullscreen, class:(steam_app)"
-        "renderunfocused, class:(steam_app)"
-      ];
 
       monitor = [
         "DP-2, 1920x1080, 0x0, 1"

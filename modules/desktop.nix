@@ -43,7 +43,7 @@
     MOZ_ENABLE_WAYLAND = "1";
     DOTNET_CLI_TELEMETRY_OPTOUT="1";
     MESA_LOADER_DRIVER_OVERRIDE="nvidia";
-    LD_LIBRARY_PATH="${pkgs.wayland}/lib:${pkgs.nss_latest}/lib:${pkgs.nspr}/lib:$LD_LIBRARY_PATH";
+    LD_LIBRARY_PATH="${pkgs.wayland}/lib:${pkgs.nss_latest}/lib:${pkgs.nspr}/lib:${pkgs.icu}/lib:$LD_LIBRARY_PATH";
     GODOT_DISPLAY_DRIVER="wayland";
     LIBGL_ALWAYS_SOFTWARE="0";
     LIBGL_ALWAYS_INDIRECT="0";
@@ -51,6 +51,7 @@
     QT_QPA_PLATFORMTHEME = "qt5ct";
     DOTNET_ROOT = "${pkgs.dotnetCorePackages.dotnet_8.sdk}/share/dotnet/shared/Microsoft.NETCore.App";
     OLLAMA_MODELS = "/media/disk/aiaiai/";
+    DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = "1";
   };
 
   security.polkit.enable = true;
