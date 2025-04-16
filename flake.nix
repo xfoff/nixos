@@ -72,34 +72,5 @@
           specialArgs = { inherit inputs system user-inputs; };
         };
       };
-
-      homeConfigurations = {
-        "pc" = home-manager.lib.homeManagerConfiguration {
-          modules = [
-            ./hosts/pc/home/home.nix
-          ];
-
-          pkgs = import nixpkgs {
-            inherit system;
-            config.allowUnfree = true;
-            config.permittedInsecurePackages = [
-              "dotnet-sdk-6.0.428"
-            ];
-            overlays = [
-              (final: prev: {
-                unstable = import nixpkgs-unstable {
-                  inherit system;
-                  config.allowUnfree = true;
-                  config.permittedInsecurePackages = [
-                    "dotnet-runtime-7.0.20"
-                  ];
-                };
-              })
-            ];
-          };
-
-          extraSpecialArgs = { inherit inputs system user-inputs; };
-        };
-      };
     };
 }

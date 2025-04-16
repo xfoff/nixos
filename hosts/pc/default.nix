@@ -17,4 +17,13 @@
     inputs.nixvim.nixosModules.nixvim
     inputs.home-manager.nixosModules.home-manager
   ];
+
+  home-manager = {
+    useUserPackages = true;
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      xfof = import ./home/home.nix;
+    };
+    backupFileExtension = "backup";
+  };
 }
