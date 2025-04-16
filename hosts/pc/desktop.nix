@@ -43,7 +43,7 @@
     MOZ_ENABLE_WAYLAND = "1";
     DOTNET_CLI_TELEMETRY_OPTOUT="1";
     MESA_LOADER_DRIVER_OVERRIDE="nvidia";
-    LD_LIBRARY_PATH="${pkgs.wayland}/lib:${pkgs.nss_latest}/lib:${pkgs.nspr}/lib:${pkgs.icu}/lib:$LD_LIBRARY_PATH";
+    LD_LIBRARY_PATH="${pkgs.wayland}/lib:${pkgs.nss_latest}/lib:${pkgs.nspr}/lib:${pkgs.icu}/lib:${pkgs.vulkan-loader}/lib:$LD_LIBRARY_PATH";
     GODOT_DISPLAY_DRIVER="wayland";
     LIBGL_ALWAYS_SOFTWARE="0";
     LIBGL_ALWAYS_INDIRECT="0";

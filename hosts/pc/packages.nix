@@ -56,7 +56,7 @@
     dotnetCorePackages.dotnet_8.sdk
     dotnetCorePackages.dotnet_8.runtime
     fontconfig
-    cargo
+    unstable.cargo
     alsa-lib
     alsa-utils
     alsa-tools
@@ -91,6 +91,8 @@
     unstable.icu
     meld
     bash
+    libreoffice-qt6-fresh
+    unstable.gowall
     #add new packages above
   ];
 

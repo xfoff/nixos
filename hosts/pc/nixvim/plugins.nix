@@ -134,11 +134,6 @@
         jsonls.enable = true;
         lua_ls.enable = true;
         nixd.enable = true;
-        rust_analyzer = {
-          enable = true;
-          installCargo = true;
-          installRustc = true;
-        };
         ts_ls.enable = true;
         hyprls = {
           enable = true;
@@ -178,6 +173,29 @@
       cmp.enable = true;
     };
 
+    bacon.enable = true;
+    conform-nvim = {
+      enable = true;
+      settings = {formatters_by_ft.rust = ["rustfmt"];};
+    };
+
+    rustaceanvim = {
+      enable = true;
+      settings = {
+        tools.enable_clippy = true;
+        server = {
+          default_settings = {
+            inlayHints = {lifetimeElisionHints = {enable = "always";};};
+            rust-analyzer = {
+              cargo = {allFeatures = true;};
+              check = {command = "clippy";};
+              files = {excludeDirs = ["target" ".git" ".cargo" ".github" ".direnv"];};
+            };
+          };
+        };
+      };
+    };
+
     cmp = {
       enable = true;
       autoEnableSources = true;
@@ -209,6 +227,7 @@
     cmp-nvim-lsp.enable = true;
     cmp-path.enable = true;
     cmp-buffer.enable = true;
+    cmp-treesitter.enable = true;
 
     luasnip = {
       enable = true;

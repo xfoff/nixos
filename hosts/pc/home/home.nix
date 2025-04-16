@@ -162,7 +162,7 @@
       ];
 
       exec-once = [
-        "swaybg -i /home/xfof/.config/hypr/wallpapers/5.jpg"
+        "swaybg -i /home/xfof/.config/hypr/wallpapers/paper.jpg"
         "hyprctl setcursor rose-pine-hyprcursor 24"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
         ''nix-shell ~/.config/fabric/shell.nix --run "python ~/.config/fabric/bar/bar.py"''
@@ -185,8 +185,8 @@
       );
 
       monitor = [
-        "DP-2, 1920x1080, 0x0, 1"
-        "DP-1, 1920x1080, 1920x0, 1"
+        "DP-1, 1920x1080, 0x0, 1"
+        "DP-2, 1920x1080, 1920x0, 1"
       ];
 
       env = [
