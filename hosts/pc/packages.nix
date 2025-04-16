@@ -93,6 +93,7 @@
     bash
     libreoffice-qt6-fresh
     unstable.gowall
+    inputs.home-manager.packages.${pkgs.system}.default
     #add new packages above
   ];
 

@@ -10,7 +10,7 @@
     hyprls.url = "github:hyprland-community/hyprls";
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, self, ... } @inputs:
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, self, ... } @inputs:
     let
       system = "x86_64-linux";
       user-inputs = { 
@@ -18,57 +18,88 @@
         mainUsername = "xfof";
       };
     in
-      {
-      nixosConfigurations."pc" = nixpkgs.lib.nixosSystem {
-        system = system;
-        modules = [
-          ./hosts/pc/default.nix
-        ];
-        pkgs = import nixpkgs {
-          inherit system;
-          config.allowUnfree = true;
-          config.permittedInsecurePackages = [
-            "dotnet-sdk-6.0.428"
+    {
+      nixosConfigurations = {
+        "pc" = nixpkgs.lib.nixosSystem {
+          system = system;
+          modules = [
+            ./hosts/pc/default.nix
           ];
-          overlays = [
-            (final: prev: {
-              unstable = import nixpkgs-unstable {
-                inherit system;
-                config.allowUnfree = true;
-                config.permittedInsecurePackages = [
-                  "dotnet-runtime-7.0.20"
-                ];
-              };
-            })
-          ];
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+            config.permittedInsecurePackages = [
+              "dotnet-sdk-6.0.428"
+            ];
+            overlays = [
+              (final: prev: {
+                unstable = import nixpkgs-unstable {
+                  inherit system;
+                  config.allowUnfree = true;
+                  config.permittedInsecurePackages = [
+                    "dotnet-runtime-7.0.20"
+                  ];
+                };
+              })
+            ];
+          };
+          specialArgs = { inherit inputs system user-inputs; };
         };
-        specialArgs = { inherit inputs system user-inputs; };
+
+        "laptop" = nixpkgs.lib.nixosSystem {
+          system = system;
+          modules = [
+            ./hosts/laptop/default.nix
+          ];
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+            config.permittedInsecurePackages = [
+              "dotnet-sdk-6.0.428"
+            ];
+            overlays = [
+              (final: prev: {
+                unstable = import nixpkgs-unstable {
+                  inherit system;
+                  config.allowUnfree = true;
+                  config.permittedInsecurePackages = [
+                    "dotnet-runtime-7.0.20"
+                  ];
+                };
+              })
+            ];
+          };
+          specialArgs = { inherit inputs system user-inputs; };
+        };
       };
 
-      nixosConfigurations."laptop" = nixpkgs.lib.nixosSystem {
-        system = system;
-        modules = [
-          ./hosts/laptop/default.nix
-        ];
-        pkgs = import nixpkgs {
-          inherit system;
-          config.allowUnfree = true;
-          config.permittedInsecurePackages = [
-            "dotnet-sdk-6.0.428"
+      homeConfigurations = {
+        "pc" = home-manager.lib.homeManagerConfiguration {
+          modules = [
+            ./hosts/pc/home/home.nix
           ];
-          overlays = [
-            (final: prev: {
-              unstable = import nixpkgs-unstable {
-                inherit system;
-                config.allowUnfree = true;
-                config.permittedInsecurePackages = [
-                  "dotnet-runtime-7.0.20"
-                ];
-              };
-            })
-          ];
+
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+            config.permittedInsecurePackages = [
+              "dotnet-sdk-6.0.428"
+            ];
+            overlays = [
+              (final: prev: {
+                unstable = import nixpkgs-unstable {
+                  inherit system;
+                  config.allowUnfree = true;
+                  config.permittedInsecurePackages = [
+                    "dotnet-runtime-7.0.20"
+                  ];
+                };
+              })
+            ];
+          };
+
+          extraSpecialArgs = { inherit inputs system user-inputs; };
         };
-        specialArgs = { inherit inputs system user-inputs; };
       };
     };
 }
