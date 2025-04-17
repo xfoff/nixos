@@ -56,7 +56,7 @@
     dotnetCorePackages.dotnet_8.sdk
     dotnetCorePackages.dotnet_8.runtime
     fontconfig
-    unstable.cargo
+    cargo
     alsa-lib
     alsa-utils
     alsa-tools
@@ -65,7 +65,7 @@
     nix-prefetch-git
     eog
     meslo-lgs-nf
-    unstable.godot_4-mono
+    godot_4-mono
     gnome-themes-extra
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
@@ -87,12 +87,12 @@
     killall
     inotify-tools
     polkit_gnome
-    unstable.vintagestory
-    unstable.icu
+    vintagestory
+    icu
     meld
     bash
     libreoffice-qt6-fresh
-    unstable.gowall
+    gowall
     modrinth-app
     #add new packages above
   ];

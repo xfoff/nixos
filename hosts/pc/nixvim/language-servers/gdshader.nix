@@ -7,7 +7,7 @@
 rustPlatform.buildRustPackage {
   pname = "gdshader-lsp";
   version = "1.0.0";
-  cargoHash = "sha256-6/xPih+txtISmYSw1s+40YT2OBsLsx/SYZbgoIfnpao=";
+  cargoHash = "sha256-FP3SMcafLbz3jqKTunCi4Z1CeZADLmmsIyWHQICmi8o=";
 
   src = fetchFromGitHub {
     owner = "GodOfAvacyn";
