@@ -87,11 +87,11 @@
         blur = {
           enabled = true;
           size = 10;
-          passes = 3;
+          passes = 1;
           new_optimizations = true;
           ignore_opacity = true;
-          noise = 0.1 ;
-          brightness = 0.90;
+          noise = 0;
+          brightness = 0.80;
         };
       };
 

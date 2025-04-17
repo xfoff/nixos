@@ -93,6 +93,7 @@
     bash
     libreoffice-qt6-fresh
     unstable.gowall
+    modrinth-app
     #add new packages above
   ];
 

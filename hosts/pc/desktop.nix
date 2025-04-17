@@ -52,6 +52,9 @@
     DOTNET_ROOT = "${pkgs.dotnetCorePackages.dotnet_8.sdk}/share/dotnet/shared/Microsoft.NETCore.App";
     OLLAMA_MODELS = "/media/disk/aiaiai/";
     DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = "1";
+    WEBKIT_DISABLE_DMABUF_RENDERER = "1";
+    WEBKIT_DISABLE_COMPOSITING_MODE = "1";
+    GSK_RENDER = "gl";
   };
 
   security.polkit.enable = true;

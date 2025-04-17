@@ -19,7 +19,6 @@
   ];
 
   home-manager = {
-    useUserPackages = true;
     extraSpecialArgs = { inherit inputs; };
     users = {
       xfof = import ./home/home.nix;
