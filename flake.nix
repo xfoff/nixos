@@ -7,6 +7,7 @@
     nixvim.url = "github:nix-community/nixvim/nixos-24.11";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     hyprls.url = "github:hyprland-community/hyprls";
+    firebot.url = "github:xfoff/nixerbot";
   };
 
   outputs = { nixpkgs, self, ... } @inputs:

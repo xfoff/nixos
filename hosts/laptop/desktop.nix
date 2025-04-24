@@ -3,8 +3,12 @@
 {
   services.xserver = {
     enable = true;
-    windowManager.i3.enable = true;
-    desktopManager.xfce.enable = true;
+    windowManager = {
+      i3.enable = true;
+      dwm = {
+        enable = true;
+      };
+    };
   };
 
   services.displayManager = {
@@ -46,8 +50,6 @@
     QT_QPA_PLATFORM = "wayland";
     QT_QPA_PLATFORMTHEME = "qt5ct";
     DOTNET_ROOT = "${pkgs.dotnetCorePackages.dotnet_8.sdk}/share/dotnet/shared/Microsoft.NETCore.App";
-    ANDROID_HOME = "/home/xfof/Android/Sdk";
-    JAVA_HOME = "${pkgs.jdk17}";
   };
 
   security.polkit.enable = true;

@@ -73,20 +73,31 @@
     killall
     inotify-tools
     xorg.libxkbfile
-    android-tools
-    jdk17
-    aapt
-    (pkgs.callPackage ./packages/supabase-cli.nix {})
-    certbot-full
-    nginx
-    openssl
+    # android-tools
+    # jdk17
+    # aapt
+    # (pkgs.callPackage ./packages/supabase-cli.nix {})
+    # certbot-full
+    # nginx
+    # openssl
+    modrinth-app
+    acpi
+    brightnessctl
+    wev
+    powertop
+    cpufrequtils
+    gnumake
+    freetype
+    nix-prefetch
+    vesktop
+    openra
     #add new packages above
   ];
 
   programs.virt-manager.enable = true;
   virtualisation = {
     libvirtd = {
-      enable = true;
+      enable = false;
       nss.enable = true;
       nss.enableGuest = true;
       qemu = {
@@ -98,7 +109,7 @@
     };
     spiceUSBRedirection.enable = true;
     waydroid.enable = true;
-    docker.enable = true;
+    # docker.enable = true;
   };
 
   programs.zsh.enable = true;

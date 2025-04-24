@@ -145,6 +145,8 @@
         "SUPER, H, movewindow, l"
         "SUPER, J, movewindow, d"
         "SUPER, K, movewindow, u"
+        ", XF86MonBrightnessUp, exec, brightnessctl s 5%+"
+        ", XF86MonBrightnessDown, exec, brightnessctl s 5%-"
       ] ++ (
         builtins.concatLists (builtins.genList (i:
           let
@@ -166,6 +168,7 @@
         "hyprctl setcursor rose-pine-hyprcursor 24"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
         ''nix-shell ~/.config/fabric/shell.nix --run "python ~/.config/fabric/bar/bar.py"''
+        "sudo powertop --auto-tune"
       ];
 
       windowrulev2 = [
