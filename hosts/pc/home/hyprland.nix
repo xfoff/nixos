@@ -57,13 +57,13 @@
       ] ++ (
         builtins.concatLists (builtins.map (app:
           [
-            "noblur, title:(${app})"
-            "nodim, title:(${app})"
-            "opaque, title:(${app})"
+            "noblur, class:(${app})"
+            "nodim, class:(${app})"
+            "opaque, class:(${app})"
             "idleinhibit fullscreen, class:(${app})"
             "renderunfocused, class:(${app})"
           ]
-        ) ["Zen" "Discord" "rofi" "steam_app" "Godot"])
+        ) ["zen-beta" "vesktop" "rofi" "steam_app" "godot"])
       );
 
       monitor = [
