@@ -120,7 +120,9 @@
           filetypes = [ "vert" "frag" ];
         };
         gdscript = {
-          enable = false;
+          enable = true;
+          package = pkgs.callPackage ./language-servers/gdscript.nix {};
+          filetypes = [ "gd" ];
         };
         gdshader_lsp = {
           enable = true;
