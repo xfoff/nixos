@@ -54,4 +54,6 @@
 
   security.polkit.enable = true;
   programs.dconf.enable = true;
+
+  services.logind.lidSwitch = "ignore";
 }

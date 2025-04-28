@@ -97,7 +97,7 @@
   programs.virt-manager.enable = true;
   virtualisation = {
     libvirtd = {
-      enable = false;
+      enable = true;
       nss.enable = true;
       nss.enableGuest = true;
       qemu = {
