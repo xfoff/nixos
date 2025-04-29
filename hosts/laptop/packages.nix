@@ -91,6 +91,8 @@
     nix-prefetch
     vesktop
     openra
+    inputs.hyprlock.packages.${pkgs.system}.default
+    dwarf-fortress
     #add new packages above
   ];
 
