@@ -31,7 +31,7 @@
     rose-pine-gtk-theme
     rose-pine-icon-theme
     nwg-look
-    obs-studio
+    #obs-studio
     zip
     rofi-wayland
     libGLU
@@ -61,7 +61,7 @@
     alsa-utils
     alsa-tools
     aseprite
-    espflash
+    arduino-ide
     nix-prefetch-git
     eog
     meslo-lgs-nf
@@ -96,6 +96,11 @@
     modrinth-app
     #add new packages above
   ];
+
+  programs.obs-studio = {
+    enable = true;
+    enableVirtualCamera = true;
+  };
 
   #virtualbox
   programs.virt-manager.enable = true;

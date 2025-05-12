@@ -11,6 +11,7 @@
       "vboxusers"
       "libvirt"
       "kvm"
+      "dialout"
     ];
   };
 }
