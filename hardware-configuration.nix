@@ -33,35 +33,7 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.br-92ce7f8ef60a.useDHCP = lib.mkDefault true;
-  # networking.interfaces.br-f38aa6e94715.useDHCP = lib.mkDefault true;
-  # networking.interfaces.docker0.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp4s0.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth0113c96.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth12161a5.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth13be4ba.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth1596290.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth1619a26.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth253a11e.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth29d1478.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth36e7498.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth3e902d0.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth51354f4.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth6911a17.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth6a90a01.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth73eeb82.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth77cff27.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth7c69f89.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth8496172.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth8c9dbe8.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth9617856.useDHCP = lib.mkDefault true;
-  # networking.interfaces.veth983f3b7.useDHCP = lib.mkDefault true;
-  # networking.interfaces.vetha156e08.useDHCP = lib.mkDefault true;
-  # networking.interfaces.vetha2d3877.useDHCP = lib.mkDefault true;
-  # networking.interfaces.vethc2d4f5b.useDHCP = lib.mkDefault true;
-  # networking.interfaces.vethc97971d.useDHCP = lib.mkDefault true;
-  # networking.interfaces.vethf56507b.useDHCP = lib.mkDefault true;
-  # networking.interfaces.vethf92d57f.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp3s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
