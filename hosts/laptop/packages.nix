@@ -1,5 +1,4 @@
 { inputs, pkgs, lib, ... }:
-
 {
   environment.systemPackages = with pkgs; [
     kitty
@@ -25,7 +24,7 @@
     wl-clipboard
     alsa-oss
     alsa-utils
-    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+    rose-pine-hyprcursor
     hyprcursor
     rose-pine-cursor
     rose-pine-gtk-theme

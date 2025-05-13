@@ -3,7 +3,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
-    rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
     nixvim.url = "github:nix-community/nixvim/nixos-24.11";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     hyprls.url = "github:hyprland-community/hyprls";
