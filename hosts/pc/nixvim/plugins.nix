@@ -144,11 +144,6 @@
         lua_ls.enable = true;
         nixd.enable = true;
         ts_ls.enable = true;
-        hyprls = {
-          enable = true;
-          package = pkgs.hyprls;
-          filetypes = [ "conf" ];
-        };
         pyright.enable = true;
       };
     };

@@ -7,11 +7,6 @@
     git
     vim  
     pipes-rs
-    hyprpaper
-    swaybg
-    swaylock
-    swayidle
-    neovim
     unzip
     gcc
     nodejs_23
@@ -68,7 +63,6 @@
     gimp
     nix-prefetch
     inputs.zen-browser.packages.${pkgs.system}.twilight
-    inputs.hyprls.packages.${pkgs.system}.default
     killall
     inotify-tools
     xorg.libxkbfile

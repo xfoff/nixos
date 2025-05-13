@@ -83,7 +83,6 @@
     nix-prefetch
     inputs.zen-browser.packages.${pkgs.system}.default
     ollama-cuda
-    inputs.hyprls.packages.${pkgs.system}.default
     killall
     inotify-tools
     polkit_gnome
