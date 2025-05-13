@@ -231,6 +231,13 @@
       input = {
         kb_layout = "pl";
         kb_options = "grp:caps_toggle";
+
+        touchpad = {
+          disable_while_typing = false;
+          middle_button_emulation = true;
+          tap-to-click = true;
+          natural_scroll = true;
+        };
       };
 
       dwindle = {
