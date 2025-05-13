@@ -121,8 +121,15 @@
         };
         gdscript = {
           enable = true;
-          package = pkgs.callPackage ./language-servers/gdscript.nix {};
-          filetypes = [ "gd" ];
+          package = null;
+
+          settings = {
+            cmd = {
+              __raw = ''
+                vim.list_extend({ "vim.lsp.rpc.connect", "127.0.0.1", "6005" }, {})
+              '';
+            };
+          };
         };
         gdshader_lsp = {
           enable = true;

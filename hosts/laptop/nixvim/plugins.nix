@@ -120,7 +120,7 @@
         };
         gdscript = {
           enable = false;
-          package = pkgs.vimPlugins.nvim-treesitter-parsers.gdscript;
+          package = pkgs.pkgs.gdtoolkit_4;
         };
         gdshader_lsp = {
           enable = false;
