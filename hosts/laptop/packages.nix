@@ -86,7 +86,6 @@
     #inputs.hyprlock.packages.${pkgs.system}.default
     dwarf-fortress
     jetbrains.rider
-    neovim
     swaybg
     hypridle
     #add new packages above
