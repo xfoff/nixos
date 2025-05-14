@@ -9,7 +9,7 @@
     pipes-rs
     unzip
     gcc
-    nodejs_23
+    nodejs_24
     cbonsai
     python3
     hyprshot
@@ -59,10 +59,9 @@
     spice-protocol
     nss_latest
     waypipe
-    #(import ../home/Apps/curseforge.nix { inherit pkgs steam-run unzip; })
     gimp
     nix-prefetch
-    inputs.zen-browser.packages.${pkgs.system}.twilight
+    #inputs.zen-browser.packages.${pkgs.system}.twilight
     killall
     inotify-tools
     xorg.libxkbfile
@@ -84,8 +83,12 @@
     nix-prefetch
     vesktop
     openra
-    inputs.hyprlock.packages.${pkgs.system}.default
+    #inputs.hyprlock.packages.${pkgs.system}.default
     dwarf-fortress
+    jetbrains.rider
+    neovim
+    swaybg
+    hypridle
     #add new packages above
   ];
 
