@@ -49,7 +49,7 @@
     nix-prefetch-git
     eog
     meslo-lgs-nf
-    #godot_4-mono
+    godot-mono
     gnome-themes-extra
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
@@ -61,17 +61,10 @@
     waypipe
     gimp
     nix-prefetch
-    #inputs.zen-browser.packages.${pkgs.system}.twilight
+    inputs.zen-browser.packages.${pkgs.system}.twilight
     killall
     inotify-tools
     xorg.libxkbfile
-    # android-tools
-    # jdk17
-    # aapt
-    # (pkgs.callPackage ./packages/supabase-cli.nix {})
-    # certbot-full
-    # nginx
-    # openssl
     modrinth-app
     acpi
     brightnessctl
@@ -83,7 +76,6 @@
     nix-prefetch
     vesktop
     openra
-    #inputs.hyprlock.packages.${pkgs.system}.default
     dwarf-fortress
     jetbrains.rider
     swaybg
@@ -106,7 +98,6 @@
     };
     spiceUSBRedirection.enable = true;
     waydroid.enable = true;
-    # docker.enable = true;
   };
 
   programs.zsh.enable = true;
