@@ -27,6 +27,9 @@
         "SUPER, H, movewindow, l"
         "SUPER, J, movewindow, d"
         "SUPER, K, movewindow, u"
+        ", XF86MonBrightnessUp, exec, brightnessctl s 5%+"
+        ", XF86MonBrightnessDown, exec, brightnessctl s 5%-"
+        "$mod, Escape, exec, systemctl suspend"
       ] ++ (
         builtins.concatLists (builtins.genList (i:
           let
@@ -48,6 +51,7 @@
         "hyprctl setcursor rose-pine-hyprcursor 24"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
         ''nix-shell ~/.config/fabric/shell.nix --run "python ~/.config/fabric/bar/bar.py"''
+        "sudo powertop --auto-tune"
       ];
 
       windowrulev2 = [
@@ -57,18 +61,18 @@
       ] ++ (
         builtins.concatLists (builtins.map (app:
           [
-            "noblur, class:(${app})"
-            "nodim, class:(${app})"
-            "opaque, class:(${app})"
+            "noblur, title:(${app})"
+            "nodim, title:(${app})"
+            "opaque, title:(${app})"
             "idleinhibit fullscreen, class:(${app})"
             "renderunfocused, class:(${app})"
           ]
-        ) ["zen-beta" "vesktop" "rofi" "steam_app" "godot"])
+        ) ["Zen" "Discord" "rofi" "steam_app" "Godot"])
       );
 
       monitor = [
-        "DP-1, 1920x1080, 1920x0, 1"
-        "DP-2, 1920x1080, 0x0, 1"
+        "eDP-1, 1920x1080, 0x1080, 1"
+        "HDMI-A-1, 1920x1080, 0x0, 1"
       ];
 
       env = [
@@ -87,11 +91,11 @@
         blur = {
           enabled = true;
           size = 10;
-          passes = 1;
+          passes = 3;
           new_optimizations = true;
           ignore_opacity = true;
-          noise = 0;
-          brightness = 0.80;
+          noise = 0.1 ;
+          brightness = 0.90;
         };
       };
 
@@ -110,6 +114,13 @@
       input = {
         kb_layout = "pl";
         kb_options = "grp:caps_toggle";
+
+        touchpad = {
+          disable_while_typing = false;
+          middle_button_emulation = true;
+          tap-to-click = true;
+          natural_scroll = true;
+        };
       };
 
       dwindle = {
@@ -117,4 +128,4 @@
       };
     };
   };
-} 
+}

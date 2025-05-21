@@ -83,10 +83,10 @@
     #add new packages above
   ];
 
-  programs.virt-manager.enable = true;
+  programs.virt-manager.enable = false;
   virtualisation = {
     libvirtd = {
-      enable = true;
+      enable = false;
       nss.enable = true;
       nss.enableGuest = true;
       qemu = {
@@ -97,12 +97,10 @@
       };
     };
     spiceUSBRedirection.enable = true;
-    waydroid.enable = true;
+    waydroid.enable = false;
   };
 
   programs.zsh.enable = true;
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
-  programs.nix-ld.enable = true;
 }
-
