@@ -12,7 +12,7 @@
     ./system.nix
     ./disks.nix
     ./keyboard.nix
-    ./nixvim/nixvim.nix
+    ../shared/nixvim/nixvim.nix
     ./hardware-configuration.nix
     inputs.nixvim.nixosModules.nixvim
     inputs.home-manager.nixosModules.home-manager
