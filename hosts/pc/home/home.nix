@@ -2,13 +2,21 @@
 
 {
   imports = [
-    ./hyprland.nix
+    ../../shared/hyprland.nix
   ];
+
   home.username = "xfof";
   home.homeDirectory = "/home/xfof";
-  home.stateVersion = "24.05"; # Please read the comment before changing.
-  home.packages = [
-  ];
+  home.stateVersion = "25.05"; # Please read the comment before changing.
+
+  wayland.windowManager.hyprland = {
+    settings = {
+      monitor = [
+        "DP-1, 1920x1080, 1920x0, 1"
+        "DP-2, 1920x1080, 0x0, 1"
+      ];
+    };
+  };
 
   dconf = {
     enable = true;
@@ -64,9 +72,6 @@
       package = pkgs.catppuccin-qt5ct;
       name = "catppuccin-qt5ct";
     };
-  };
-
-  home.sessionVariables = {
   };
 
   home.enableNixpkgsReleaseCheck = false;
