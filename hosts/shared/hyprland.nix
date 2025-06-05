@@ -57,7 +57,6 @@ in
         "swaybg -i ${wallpaper}"
         "hyprctl setcursor rose-pine-hyprcursor 24"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
-        ''nix-shell ~/.config/fabric/shell.nix --run "python ~/.config/fabric/bar/bar.py"''
         "sudo powertop --auto-tune"
       ];
 
@@ -68,19 +67,14 @@ in
       ] ++ (
         builtins.concatLists (builtins.map (app:
           [
-            "noblur, title:(${app})"
-            "nodim, title:(${app})"
-            "opaque, title:(${app})"
+            "noblur, class:(${app})"
+            "nodim, class:(${app})"
+            "opaque, class:(${app})"
             "idleinhibit fullscreen, class:(${app})"
             "renderunfocused, class:(${app})"
           ]
-        ) ["Zen" "Discord" "rofi" "steam_app" "Godot"])
+        ) ["zen-beta" "vesktop" "rofi" "steam_app" "godot"])
       );
-
-      monitor = [
-        "eDP-1, 1920x1080, 0x1080, 1"
-        "HDMI-A-1, 1920x1080, 0x0, 1"
-      ];
 
       env = [
         "HYPRCURSOR_THEME, rose-pine-hyprcursor"

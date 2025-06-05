@@ -14,7 +14,7 @@
     ./disks.nix
     ./keyboard.nix
     ../shared/nixvim/nixvim.nix
-    ../../hardware-configuration.nix
+    ./hardware-configuration.nix
     inputs.nixvim.nixosModules.nixvim
     inputs.home-manager.nixosModules.home-manager
   ];

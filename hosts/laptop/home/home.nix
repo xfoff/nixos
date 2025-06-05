@@ -13,6 +13,7 @@
 
   programs.zsh.shellAliases = {
     pkgs = "nvim /etc/nixos/hosts/laptop/packages.nix";
+    rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#laptop --impure";
   };
 
   wayland.windowManager.hyprland = {
