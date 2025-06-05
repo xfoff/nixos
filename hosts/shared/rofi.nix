@@ -113,8 +113,11 @@
     }
 
     message {
-      background-color: red;
+      background-color: @hlt-color;
+      text-color: @hlt-color;
       border: 0px solid;
+      border-radius: @b-radius;
+      padding: @g-padding;
     }
   '';
 }

@@ -29,6 +29,7 @@ in
         "$mod, H, movefocus, l"
         "$mod, J, movefocus, d"
         "$mod, K, movefocus, u"
+        "$mod, C, exec, rofi -show calc -modi calc -no-show-match -no-sort"
         "SUPER, L, movewindow, r"
         "SUPER, H, movewindow, l"
         "SUPER, J, movewindow, d"
