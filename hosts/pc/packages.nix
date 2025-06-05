@@ -1,9 +1,7 @@
-{ inputs, pkgs, lib, ... }:
+{ inputs, pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-    kitty
-    xterm
     wget
     git
     vim  
@@ -118,6 +116,7 @@
     waydroid.enable = true;
   };
 
+  environment.pathsToLink = [ "/share/zsh" ];
   programs.zsh.enable = true;
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;

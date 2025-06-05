@@ -8,21 +8,31 @@
       ./options.nix
     ];
 
-    colorschemes.kanagawa = {
+    colorschemes.catppuccin = {
       enable = true;
       settings = {
-        compile = false;
-        dimInactive = false;
-        undercurl = true;
-        commentStyle = { italic = true; };
-        statementStyle = { bold = true; };
-        typeStyle = { bold = true; };
-        terminalColors = true;
-        theme = "wave";
-        background = {
-          dark = "dragon"; 
-          light = "lotus";
+        disable_underline = true;
+        flavour = "mocha";
+        integrations = {
+          cmp = true;
+          gitsigns = true;
+          mini = {
+            enabled = true;
+            indentscope_color = "";
+          };
+          nvimtree = true;
+          treesitter = true;
         };
+        styles = {
+          booleans = [
+            "bold"
+            "italic"
+          ];
+          conditionals = [
+            "bold"
+          ];
+        };
+        term_colors = true;
       };
     };
   };

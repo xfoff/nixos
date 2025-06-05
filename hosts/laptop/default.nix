@@ -8,6 +8,7 @@
     ./packages.nix
     ./users.nix
     ./desktop.nix
+    ./environment.nix
     ./graphics.nix
     ./system.nix
     ./disks.nix

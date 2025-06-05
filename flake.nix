@@ -10,10 +10,6 @@
   outputs = { nixpkgs, self, ... } @inputs:
     let
       system = "x86_64-linux";
-      user-inputs = { 
-        mainHostname = "iusenixbtw";
-        mainUsername = "xfof";
-      };
     in
     {
       nixosConfigurations = {
@@ -30,7 +26,7 @@
               "dotnet-sdk-6.0.428"
             ];
           };
-          specialArgs = { inherit inputs system user-inputs; };
+          specialArgs = { inherit inputs system; };
         };
 
         "laptop" = nixpkgs.lib.nixosSystem {
@@ -47,7 +43,7 @@
               "dotnet-runtime-6.0.36"
             ];
           };
-          specialArgs = { inherit inputs system user-inputs; };
+          specialArgs = { inherit inputs system; };
         };
       };
     };

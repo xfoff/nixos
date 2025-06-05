@@ -3,11 +3,18 @@
 {
   imports = [
     ../../shared/hyprland.nix
+    ../../shared/zsh.nix
+    ../../shared/kitty.nix
+    ../../shared/rofi.nix
   ];
 
   home.username = "xfof";
   home.homeDirectory = "/home/xfof";
-  home.stateVersion = "25.05"; # Please read the comment before changing.
+  home.stateVersion = "25.05";
+
+  programs.zsh.shellAliases = {
+    pkgs = "nvim /etc/nixos/hosts/laptop/packages.nix";
+  };
 
   wayland.windowManager.hyprland = {
     settings = {
