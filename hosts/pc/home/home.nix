@@ -13,7 +13,7 @@
   home.stateVersion = "25.05";
 
   programs.zsh.shellAliases = {
-    pkgs = "nvim /etc/nixos/hosts/laptop/packages.nix";
+    pkgs = "nvim /etc/nixos/hosts/pc/packages.nix";
     rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#pc --impure";
   };
 

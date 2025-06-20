@@ -76,7 +76,7 @@
     gimp
     qbittorrent
     easyeffects
-    zulu
+    zulu17
     nix-prefetch
     inputs.zen-browser.packages.${pkgs.system}.default
     ollama-cuda
@@ -90,6 +90,8 @@
     libreoffice-qt6-fresh
     gowall
     modrinth-app
+    qmk
+    protonvpn-cli_2
     #add new packages above
   ];
 

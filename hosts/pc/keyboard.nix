@@ -22,4 +22,5 @@
 
   fonts.fontconfig.hinting.enable = true;
   fonts.fontconfig.hinting.autohint = true;
+  hardware.keyboard.qmk.enable = true;
 }
