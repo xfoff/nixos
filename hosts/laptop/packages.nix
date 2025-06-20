@@ -63,7 +63,7 @@
     killall
     inotify-tools
     xorg.libxkbfile
-    modrinth-app-unwrapped
+    modrinth-app
     acpi
     brightnessctl
     wev
@@ -78,13 +78,15 @@
     jetbrains.rider
     swaybg
     hypridle
+    zulu17
+    protonvpn-cli_2
     #add new packages above
   ];
 
-  programs.virt-manager.enable = false;
+  programs.virt-manager.enable = true;
   virtualisation = {
     libvirtd = {
-      enable = false;
+      enable = true;
       nss.enable = true;
       nss.enableGuest = true;
       qemu = {
