@@ -58,7 +58,7 @@ in
         "hyprctl setcursor rose-pine-hyprcursor 24"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
         "sudo powertop --auto-tune"
-        "protonvpn-app"
+        "[workspace 11 silent] protonvpn-app"
       ];
 
       windowrulev2 = [
