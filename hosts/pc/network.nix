@@ -5,7 +5,7 @@
   networking.networkmanager.enable = true;
 
   networking.firewall = {
-    enable = true;
+    enable = false;
     allowedTCPPorts = [ 80 25565 ];
     allowedUDPPortRanges = [
       { from = 4000; to = 4007; }

@@ -91,7 +91,8 @@
     gowall
     modrinth-app
     qmk
-    protonvpn-cli_2
+    wireguard-ui
+    protonvpn-gui
     #add new packages above
   ];
 

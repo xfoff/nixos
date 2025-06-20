@@ -79,7 +79,8 @@
     swaybg
     hypridle
     zulu17
-    protonvpn-cli_2
+    wireguard-ui
+    protonvpn-gui
     #add new packages above
   ];
 
