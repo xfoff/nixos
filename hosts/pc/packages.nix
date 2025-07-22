@@ -1,5 +1,4 @@
 { inputs, pkgs, ... }:
-
 {
   environment.systemPackages = with pkgs; [
     wget
@@ -11,7 +10,8 @@
     swaylock
     swayidle
     unzip
-    gcc
+    # gcc
+    clang
     nodejs_24
     cbonsai
     python3
@@ -48,10 +48,10 @@
     wayland-scanner
     speechd
     egl-wayland
-    #dotnetCorePackages.dotnet_9.sdk
-    #dotnetCorePackages.dotnet_9.runtime
-    dotnetCorePackages.dotnet_8.sdk
-    dotnetCorePackages.dotnet_8.runtime
+    dotnetCorePackages.dotnet_9.sdk
+    dotnetCorePackages.dotnet_9.runtime
+    # dotnetCorePackages.dotnet_8.sdk
+    # dotnetCorePackages.dotnet_8.runtime
     fontconfig
     cargo
     alsa-lib
@@ -64,9 +64,12 @@
     meslo-lgs-nf
     godot_4-mono
     gnome-themes-extra
-    libsForQt5.qtstyleplugin-kvantum
-    libsForQt5.qt5ct
-    libsForQt5.qt5.qtwayland
+    kdePackages.waylib
+    kdePackages.qt6ct
+    kdePackages.qtsvg
+    kdePackages.qtvirtualkeyboard
+    kdePackages.qtmultimedia
+    qtemu
     spice
     spice-gtk
     spice-protocol
@@ -76,9 +79,9 @@
     gimp
     qbittorrent
     easyeffects
-    zulu17
+    zulu21
     nix-prefetch
-    inputs.zen-browser.packages.${pkgs.system}.default
+    inputs.zen-browser.packages.${pkgs.system}.twilight
     ollama-cuda
     killall
     inotify-tools
@@ -93,6 +96,11 @@
     qmk
     wireguard-ui
     protonvpn-gui
+    noip
+    android-tools
+    android-udev-rules
+    openssh
+    parted
     #add new packages above
   ];
 
@@ -117,6 +125,10 @@
     };
     spiceUSBRedirection.enable = true;
     waydroid.enable = true;
+  };
+
+  qt = {
+    enable = true;
   };
 
   environment.pathsToLink = [ "/share/zsh" ];

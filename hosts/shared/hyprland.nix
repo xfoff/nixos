@@ -74,7 +74,7 @@ in
             "idleinhibit fullscreen, class:(${app})"
             "renderunfocused, class:(${app})"
           ]
-        ) ["zen-beta" "vesktop" "rofi" "steam_app" "godot"])
+        ) ["zen-twilight" "vesktop" "rofi" "steam_app" "godot"])
       );
 
       env = [

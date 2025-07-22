@@ -15,6 +15,10 @@
   };
 
   programs.nix-ld.enable = true;
+  programs.nh = {
+    enable = false;
+  };
+
   time.timeZone = "Europe/Warsaw";
   system.stateVersion = "25.05";
 }

@@ -12,15 +12,14 @@ pkgs.stdenv.mkDerivation {
   src = pkgs.fetchFromGitHub {
     owner = "Keyitdev";
     repo = "sddm-astronaut-theme";
-    rev = "8993670e73d36f4e8edc70d13614fa05edc2575c";
-    sha256 = "0pjf12x6420rnrbj7q059szfpswcy7y8srsij6dg513fkzj5fimq";
+    rev = "3ef9f511fd072ff3dbb6eb3c1c499a71f338967e";
+    sha256 = "0pjghj2w0gdiksb6zi04yc5r217jckknw0ijayfdimfaidkv6w6z";
   };
 
   installPhase = ''
     mkdir -p $out
     cp -R ./* $out/
-    rm $out/Backgrounds/1.png
-    cp -r ${bg} $out/Backgrounds/1.png
-    sed -i '/PartialBlur="true"/c\PartialBlur="false"' $out/Themes/theme1.conf
+    cp -r ${bg} $out/Backgrounds/astronaut.png
+    sed -i '/PartialBlur="true"/c\PartialBlur="false"' $out/Themes/astronaut.conf
   '';
 }
