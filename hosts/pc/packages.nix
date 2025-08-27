@@ -48,10 +48,8 @@
     wayland-scanner
     speechd
     egl-wayland
-    dotnetCorePackages.dotnet_9.sdk
-    dotnetCorePackages.dotnet_9.runtime
-    # dotnetCorePackages.dotnet_8.sdk
-    # dotnetCorePackages.dotnet_8.runtime
+    dotnetCorePackages.dotnet_8.sdk
+    dotnetCorePackages.dotnet_8.runtime
     fontconfig
     cargo
     alsa-lib
@@ -101,6 +99,7 @@
     android-udev-rules
     openssh
     parted
+    noip
     #add new packages above
   ];
 
@@ -126,6 +125,9 @@
     spiceUSBRedirection.enable = true;
     waydroid.enable = true;
   };
+  services.qemuGuest.enable = true;
+  services.spice-vdagentd.enable = true;
+  systemd.tmpfiles.rules = [ "L+ /var/lib/qemu/firmware - - - - ${pkgs.qemu}/share/qemu/firmware" ];
 
   qt = {
     enable = true;

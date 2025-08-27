@@ -27,6 +27,9 @@
     extraPortals = with pkgs; [
       xdg-desktop-portal-hyprland
     ];
+    config = {
+      hyprland.preferred = [ "hyprland" "gtk" ];
+    };
   };
 
   security.polkit.enable = true;

@@ -1,8 +1,13 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 let
   wallpaper = pkgs.fetchurl {
-    url = "https://raw.githubusercontent.com/xfoff/wallpapers/main/invasion.png";
-    sha256 = "1s112ra2s22394rjn7lkbgrj21vbdvs896hdqcag0q0nnigdj07j";
+    url = "https://raw.githubusercontent.com/xfoff/wallpapers/main/rose-pine-squigly.jpg";
+    sha256 = "1ywgki29zmiq3szx4x5nvb3z7a73csc369jx8gb7ia8vsyiy041q";
+  };
+
+  rose-pine = pkgs.fetchurl {
+    url = "https://raw.githubusercontent.com/rose-pine/hyprland/refs/heads/main/rose-pine.conf";
+    sha256 = "0q4zna3njimn2ffaincjcxyiyx8qlz625q6n4k3qbxwqbmvdlcc2";
   };
 in
 {
@@ -10,6 +15,8 @@ in
     enable = true;
 
     settings = {
+      source = "${rose-pine}";
+
       "$mod" = "ALT";
       bind = [
         "$mod, T, exec, kitty"
@@ -68,13 +75,11 @@ in
       ] ++ (
         builtins.concatLists (builtins.map (app:
           [
-            "noblur, class:(${app})"
             "nodim, class:(${app})"
-            "opaque, class:(${app})"
             "idleinhibit fullscreen, class:(${app})"
             "renderunfocused, class:(${app})"
           ]
-        ) ["zen-twilight" "vesktop" "rofi" "steam_app" "godot"])
+        ) ["zen-twilight" "rofi" "steam_app"])
       );
 
       env = [
@@ -84,11 +89,11 @@ in
 
       decoration = {
         rounding = 6;
-        active_opacity = 1.00;
-        inactive_opacity = 0.85;
+        active_opacity = 0.9;
+        inactive_opacity = 0.9;
         fullscreen_opacity = 1.0;
         dim_inactive = true;
-        dim_strength = 0.25;
+        dim_strength = 0.4;
 
         blur = {
           enabled = true;
@@ -102,12 +107,12 @@ in
       };
 
       general = {
-        gaps_in = 3;
+        gaps_in = 4;
         gaps_out = 7;
         gaps_workspaces = 5;
-        border_size = 1;
-        "col.active_border" = "rgba(3A403DFF)";
-        "col.inactive_border" = "rgba(665c5444)";
+        border_size = 2;
+        "col.active_border" = "$rose $pine $love $iris 90deg";
+        "col.inactive_border" = "$muted";
         resize_on_border = true;
         extend_border_grab_area = 20;
         layout = "dwindle";

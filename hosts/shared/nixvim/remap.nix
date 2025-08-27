@@ -116,5 +116,17 @@
       key = "<leader>g";
       action = "<cmd>GodotRun<CR>";
     }
+
+    #dap
+    {
+      mode = ["n"];
+      key = "<leader>db";
+      action = "<cmd>DapToggleBreakpoint<CR>";
+    }
+    {
+      mode = ["n"];
+      key = "<leader>dr";
+      action = "<cmd>DapContinue<CR>";
+    }
   ];
 }

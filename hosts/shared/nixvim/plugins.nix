@@ -414,9 +414,36 @@
       settings.executable = "${pkgs.godot_4-mono}/bin/godot4-mono";
     };
 
+    dap-ui = {
+      enable = true;
+      settings = {
+        cmd = {
+          __raw = ''[[
+            local dap = require("dap")
+            local dapui = require("dapui")
+            dapui.setup()
+
+            dap.listeners.after.event_initialized["dapui_config"] = function()
+              dapui.open()
+            end
+
+            dap.listeners.before.event_initialized["dapui_config"] = function()
+              dapui.close()
+            end
+
+            dap.listeners.before.event_initialized["dapui_config"] = function()
+              dapui.close()
+            end
+          ]]'';
+        };
+      };
+    };
+
+    dap.enable = true;
     ts-autotag.enable = true;
     dotnet.enable = true;
   };
+
 
   extraPlugins = [
   ];

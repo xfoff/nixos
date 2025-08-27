@@ -1,4 +1,4 @@
-{inputs, config, pkgs, ... }:
+{pkgs, ... }:
 
 {
   imports = [
@@ -42,11 +42,6 @@
 
   gtk = {
     enable = true;
-
-    iconTheme = {
-      name = "rose-pine-icon-theme";
-      package = pkgs.rose-pine-icon-theme;
-    };
 
     theme = {
       name = "Adwaita-dark";
