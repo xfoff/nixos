@@ -42,21 +42,6 @@
   },
   "blocks": [
     {
-      "type": "rprompt",
-      "alignment": "right",
-      "segments": [
-        {
-          "type": "time",
-          "style": "plain",
-          "foreground": "p:rose",
-          "properties": {
-            "time_format": "15:04:05",
-            "always_enabled": true
-          }
-        }
-      ]
-    },
-    {
       "type": "prompt",
       "alignment": "left",
       "newline": true,
@@ -165,6 +150,21 @@
           "properties": {
             "threshold": 500,
             "style": "austin"
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "p:rose",
+          "properties": {
+            "time_format": "15:04:05",
+            "always_enabled": true
           }
         }
       ]
