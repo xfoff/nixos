@@ -135,4 +135,32 @@ in
       };
     };
   };
+
+  gtk = {
+    enable = true;
+
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome-themes-extra;
+    };
+
+    cursorTheme = {
+      name = "rose-pine-cursor";
+      package = pkgs.rose-pine-cursor;
+      size = 24;
+    };
+
+    font = {
+      name = "MesloLGS NF";
+      size = 11;
+    };
+
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme=1;
+    };
+
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme=1;
+    };
+  };
 }

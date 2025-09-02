@@ -2,7 +2,7 @@
 let
   rose-pine = pkgs.fetchurl {
     url = "https://raw.githubusercontent.com/xfoff/nixos/refs/heads/main/hosts/shared/rose-pine-posh.omp.json";
-    sha256 = "1knp23vwdf8jq09621xk0bq6v74rf4vfx0ilwwcnk7lppn96fj90";
+    sha256 = "00nxacapgizfhrflga42dq0ic7da3dzpn731fvcrh6acbig3klr9";
   };
 in
 {

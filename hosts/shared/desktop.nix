@@ -13,7 +13,7 @@
       enable = true;
       package = pkgs.kdePackages.sddm;
       wayland.enable = true;
-      theme = "${import ./home/themes/sddm.nix { inherit pkgs; }}";
+      theme = "${import ../shared/sddm.nix { inherit pkgs; }}";
     };
   };
 

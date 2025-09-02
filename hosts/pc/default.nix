@@ -2,17 +2,17 @@
 
 {
   imports = [
-    ./bootloader.nix
-    ./network.nix
-    ./sound.nix
+    ../shared/bootloader.nix
+    ../shared/network.nix
+    ../shared/sound.nix
     ./packages.nix
-    ./users.nix
-    ./desktop.nix
+    ../shared/users.nix
+    ../shared/desktop.nix
     ./environment.nix
     ./graphics.nix
-    ./system.nix
+    ../shared/system.nix
     ./disks.nix
-    ./keyboard.nix
+    ../shared/keyboard.nix
     ../shared/nixvim/nixvim.nix
     ./hardware-configuration.nix
     inputs.nixvim.nixosModules.nixvim
@@ -22,7 +22,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      xfof = import ./home/home.nix;
+      xfof = import ./home.nix;
     };
     backupFileExtension = "old";
   };
