@@ -2,10 +2,10 @@
 
 {
   imports = [
-    ../../shared/hyprland.nix
-    ../../shared/zsh.nix
-    ../../shared/kitty.nix
-    ../../shared/rofi.nix
+    ../shared/hyprland.nix
+    ../shared/zsh.nix
+    ../shared/kitty.nix
+    ../shared/rofi.nix
   ];
   home.username = "xfof";
   home.homeDirectory = "/home/xfof";
@@ -36,39 +36,6 @@
         autoconnect = ["qemu:///system"];
         uris = ["qemu:///system"];
       };
-    };
-  };
-
-  gtk = {
-    enable = true;
-
-    iconTheme = {
-      name = "rose-pine-icon-theme";
-      package = pkgs.rose-pine-icon-theme;
-    };
-
-    theme = {
-      name = "Adwaita-dark";
-      package = pkgs.gnome-themes-extra;
-    };
-
-    cursorTheme = {
-      name = "rose-pine-cursor";
-      package = pkgs.rose-pine-cursor;
-      size = 24;
-    };
-
-    font = {
-      name = "MesloLGS NF";
-      size = 11;
-    };
-
-    gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme=1;
-    };
-
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme=1;
     };
   };
 

@@ -2,10 +2,10 @@
 
 {
   imports = [
-    ../../shared/hyprland.nix
-    ../../shared/zsh.nix
-    ../../shared/kitty.nix
-    ../../shared/rofi.nix
+    ../shared/hyprland.nix
+    ../shared/zsh.nix
+    ../shared/kitty.nix
+    ../shared/rofi.nix
   ];
 
   home.username = "xfof";
