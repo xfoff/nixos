@@ -73,7 +73,6 @@
     spice-protocol
     nss_latest
     waypipe
-    #(import ../home/Apps/curseforge.nix { inherit pkgs steam-run unzip; })
     gimp
     qbittorrent
     easyeffects
