@@ -81,6 +81,9 @@
     zulu17
     wireguard-ui
     protonvpn-gui
+    nautilus
+    p7zip
+    p7zip-rar
     #add new packages above
   ];
 
@@ -100,6 +103,10 @@
     spiceUSBRedirection.enable = true;
     waydroid.enable = false;
   };
+
+  qt.enable = true;
+
+  hardware.bluetooth.enable = true;
 
   environment.pathsToLink = [ "/share/zsh" ];
   programs.zsh.enable = true;

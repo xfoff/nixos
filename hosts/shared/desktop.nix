@@ -3,9 +3,8 @@
 {
   services.xserver = {
     enable = true;
-    windowManager.i3.enable = true;
-    desktopManager.xfce.enable = true;
   };
+  services.libinput.enable = true;
 
   services.displayManager = {
     defaultSession = "hyprland";
@@ -14,6 +13,14 @@
       package = pkgs.kdePackages.sddm;
       wayland.enable = true;
       theme = "${import ../shared/sddm.nix { inherit pkgs; }}";
+      extraPackages = with pkgs; [
+        kdePackages.waylib
+        kdePackages.qt6ct
+        kdePackages.qtsvg
+        kdePackages.qtvirtualkeyboard
+        kdePackages.qtmultimedia
+        qtemu
+      ];
     };
   };
 
@@ -21,6 +28,8 @@
     enable = true;
     xwayland.enable = true;
   };
+
+  programs.niri.enable = true;
 
   xdg.portal = {
     enable = true;

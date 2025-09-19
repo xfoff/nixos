@@ -21,4 +21,10 @@
 
   time.timeZone = "Europe/Warsaw";
   system.stateVersion = "25.05";
+  services.logind.settings.Login = {
+    HandleLidSwitch = "ignore";
+    HandleLidSwitchExternalPower = "ignore";
+    HandleLidSwitchDocked = "ignore";
+    KillUserProcesses = true;
+  };
 }

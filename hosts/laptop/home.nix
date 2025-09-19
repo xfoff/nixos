@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, ... }:
 
 {
   imports = [
@@ -39,14 +39,11 @@
     };
   };
 
-  qt = {
-    enable = true;
-    platformTheme.name = "adwaita"; 
-    style = {
-      package = pkgs.catppuccin-qt5ct;
-      name = "catppuccin-qt5ct";
-    };
-  };
+  home.file."${config.xdg.configHome}.xprofile".text = ''
+    dwmstatus 2>&1 >/dev/null &
+    setxkbmap -layout us,gr -option grp:alt_caps_toggle &
+    exec dwm
+  '';
 
   home.enableNixpkgsReleaseCheck = false;
   programs.home-manager.enable = true;
