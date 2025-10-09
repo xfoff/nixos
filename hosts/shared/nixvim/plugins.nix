@@ -1,4 +1,4 @@
-{self, inputs, pkgs, lib, ...}:
+{pkgs, ...}:
 {
   plugins = {
     treesitter = {
@@ -24,6 +24,7 @@
         http
         rust
         regex
+        latex
         vimdoc
         python
         kconfig
@@ -439,11 +440,20 @@
       };
     };
 
+    vimtex = {
+      enable = true;
+      settings = {
+        compiler_method = "latexrun";
+        view_method = "zathura";
+        conceallevel = 1;
+        text_conceal = "abdmg";
+      };
+    };
+
     dap.enable = true;
     ts-autotag.enable = true;
     dotnet.enable = true;
   };
-
 
   extraPlugins = [
   ];

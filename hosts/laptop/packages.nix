@@ -24,7 +24,6 @@
     rose-pine-icon-theme
     nwg-look
     zip
-    rofi-wayland
     libGLU
     libGL
     glfw
@@ -84,6 +83,12 @@
     nautilus
     p7zip
     p7zip-rar
+    uwuify
+    uwufetch
+    wine-wayland
+    inputs.winboat.packages.${pkgs.system}.winboat
+    docker-compose
+    freerdp
     #add new packages above
   ];
 
@@ -102,6 +107,7 @@
     };
     spiceUSBRedirection.enable = true;
     waydroid.enable = false;
+    docker.enable = true;
   };
 
   qt.enable = true;

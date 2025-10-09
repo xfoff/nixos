@@ -10,19 +10,17 @@ in
     enable = true;
     cycle = false;
     font = "Figtree 13";
-    package = pkgs.rofi-wayland;
     terminal = "${pkgs.zsh}/bin/zsh";
-    modes = [ "drun" ];
+    modes = [ "drun" "calc" "games" ];
 
     extraConfig = {
       "show-icons" = true;
       "display-drun" = "";
     };
 
-    plugins = [
-      pkgs.rofi-calc
-      pkgs.rofimoji
-      pkgs.rofi-bluetooth
+    plugins = with pkgs; [
+      rofi-calc
+      rofi-games
     ];
 
   };
