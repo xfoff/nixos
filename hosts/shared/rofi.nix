@@ -10,19 +10,21 @@ in
     enable = true;
     cycle = false;
     font = "Figtree 13";
+<<<<<<< HEAD
     package = pkgs.rofi;
+=======
+>>>>>>> 53cb09bc6c6038f6ff5906f4fc221345c4e373ac
     terminal = "${pkgs.zsh}/bin/zsh";
-    modes = [ "drun" ];
+    modes = [ "drun" "calc" "games" ];
 
     extraConfig = {
       "show-icons" = true;
       "display-drun" = "";
     };
 
-    plugins = [
-      pkgs.rofi-calc
-      pkgs.rofimoji
-      pkgs.rofi-bluetooth
+    plugins = with pkgs; [
+      rofi-calc
+      rofi-games
     ];
 
   };

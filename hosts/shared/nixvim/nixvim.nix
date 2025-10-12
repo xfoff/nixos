@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.nixvim = {
     enable = true;
@@ -36,4 +36,9 @@
       };
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    latexrun
+    zathura
+  ];
 }

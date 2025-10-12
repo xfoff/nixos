@@ -22,7 +22,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      xfof = import ./home/home.nix;
+      xfof = import ./home.nix;
     };
     backupFileExtension = "backup";
   };

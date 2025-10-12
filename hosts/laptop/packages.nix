@@ -24,7 +24,6 @@
     rose-pine-icon-theme
     nwg-look
     zip
-    rofi-wayland
     libGLU
     libGL
     glfw
@@ -81,6 +80,15 @@
     zulu17
     wireguard-ui
     protonvpn-gui
+    nautilus
+    p7zip
+    p7zip-rar
+    uwuify
+    uwufetch
+    wine-wayland
+    inputs.winboat.packages.${pkgs.system}.winboat
+    docker-compose
+    freerdp
     #add new packages above
   ];
 
@@ -99,7 +107,12 @@
     };
     spiceUSBRedirection.enable = true;
     waydroid.enable = false;
+    docker.enable = true;
   };
+
+  qt.enable = true;
+
+  hardware.bluetooth.enable = true;
 
   environment.pathsToLink = [ "/share/zsh" ];
   programs.zsh.enable = true;

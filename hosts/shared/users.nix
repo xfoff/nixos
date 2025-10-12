@@ -12,6 +12,7 @@
       "libvirt"
       "kvm"
       "dialout"
+      "docker"
     ];
   };
 }

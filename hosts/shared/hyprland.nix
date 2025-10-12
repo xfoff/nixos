@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 let
   wallpaper = pkgs.fetchurl {
     url = "https://raw.githubusercontent.com/xfoff/wallpapers/main/rose-pine-squigly.jpg";
@@ -101,7 +101,7 @@ in
           passes = 3;
           new_optimizations = true;
           ignore_opacity = true;
-          noise = 0.1 ;
+          noise = 0.1;
           brightness = 0.90;
         };
       };
