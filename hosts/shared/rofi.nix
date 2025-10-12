@@ -10,7 +10,7 @@ in
     enable = true;
     cycle = false;
     font = "Figtree 13";
-    package = pkgs.rofi-wayland;
+    package = pkgs.rofi;
     terminal = "${pkgs.zsh}/bin/zsh";
     modes = [ "drun" ];
 

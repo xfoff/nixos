@@ -30,7 +30,6 @@
     nwg-look
     #obs-studio
     zip
-    rofi-wayland
     libGLU
     libGL
     glfw
@@ -61,6 +60,8 @@
     eog
     meslo-lgs-nf
     godot_4-mono
+    godot_4_4-export-templates-bin
+    godotPackages_4_4.export-templates-mono-bin
     gnome-themes-extra
     kdePackages.waylib
     kdePackages.qt6ct
@@ -79,7 +80,6 @@
     zulu21
     nix-prefetch
     inputs.zen-browser.packages.${pkgs.system}.twilight
-    ollama-cuda
     killall
     inotify-tools
     polkit_gnome
