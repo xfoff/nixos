@@ -11,7 +11,7 @@ in
     cycle = false;
     font = "Figtree 13";
     terminal = "${pkgs.zsh}/bin/zsh";
-    modes = [ "drun" "calc" "games" ];
+    modes = [ "drun" "calc" ];
 
     extraConfig = {
       "show-icons" = true;
@@ -20,7 +20,6 @@ in
 
     plugins = with pkgs; [
       rofi-calc
-      rofi-games
     ];
 
   };
