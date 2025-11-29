@@ -4,7 +4,6 @@
   services.xserver = {
     enable = true;
   };
-  services.libinput.enable = true;
 
   services.displayManager = {
     defaultSession = "hyprland";
@@ -19,7 +18,6 @@
         kdePackages.qtsvg
         kdePackages.qtvirtualkeyboard
         kdePackages.qtmultimedia
-        qtemu
       ];
     };
   };
@@ -28,10 +26,6 @@
     enable = true;
     xwayland.enable = true;
   };
-
-  programs.niri.enable = true;
-
-  services.desktopManager.gnome.enable = true;
 
   xdg.portal = {
     enable = true;
@@ -45,20 +39,4 @@
 
   security.polkit.enable = true;
   programs.dconf.enable = true;
-
-  environment.gnome.excludePackages = (with pkgs; [
-    atomix # puzzle game
-    cheese # webcam tool
-    epiphany # web browser
-    evince # document viewer
-    geary # email reader
-    gedit # text editor
-    gnome-music
-    gnome-photos
-    gnome-tour
-    hitori # sudoku game
-    iagno # go game
-    tali # poker game
-    totem # video player
-  ]);
 }

@@ -12,7 +12,7 @@ in
     font = "Figtree 13";
     package = pkgs.rofi;
     terminal = "${pkgs.zsh}/bin/zsh";
-    modes = [ "drun" "calc" "games" ];
+    modes = [ "drun" "calc" ];
 
     extraConfig = {
       "show-icons" = true;
@@ -21,7 +21,6 @@ in
 
     plugins = with pkgs; [
       rofi-calc
-      rofi-games
     ];
 
   };

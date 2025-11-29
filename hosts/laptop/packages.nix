@@ -28,19 +28,10 @@
     libGL
     glfw
     steam-run
-    jetbrains-toolbox
     mpv
     cmake
-    cargo
-    scons
-    hyprwayland-scanner
-    wayland-scanner
-    speechd
-    egl-wayland
     dotnetCorePackages.dotnet_8.sdk
     dotnetCorePackages.dotnet_8.runtime
-    fontconfig
-    cargo
     alsa-lib
     alsa-tools
     nix-prefetch-git
@@ -48,47 +39,30 @@
     meslo-lgs-nf
     godot-mono
     gnome-themes-extra
-    libsForQt5.qtstyleplugin-kvantum
-    libsForQt5.qt5ct
-    libsForQt5.qt5.qtwayland
-    spice
-    spice-gtk
-    spice-protocol
-    nss_latest
-    waypipe
     gimp
     nix-prefetch
-    inputs.zen-browser.packages.${pkgs.system}.twilight
+    inputs.zen-browser.packages.${pkgs.system}.beta
     killall
-    inotify-tools
-    xorg.libxkbfile
-    modrinth-app
     acpi
     brightnessctl
     wev
     powertop
     cpufrequtils
-    gnumake
-    freetype
-    nix-prefetch
     vesktop
-    openra
-    dwarf-fortress
-    jetbrains.rider
     swaybg
-    hypridle
     zulu17
     wireguard-ui
     protonvpn-gui
-    nautilus
-    p7zip
-    p7zip-rar
-    uwuify
-    uwufetch
-    wine-wayland
-    inputs.winboat.packages.${pkgs.system}.winboat
+    # p7zip
+    # p7zip-rar
     docker-compose
     freerdp
+    libreoffice
+    android-tools
+    easyeffects
+    android-studio
+    qbittorrent
+    qbittorrent-cli
     #add new packages above
   ];
 
@@ -101,7 +75,6 @@
       qemu = {
         swtpm.enable = true;
         runAsRoot = true;
-        ovmf.enable = true;
         vhostUserPackages = [ pkgs.virtiofsd ];
       };
     };
