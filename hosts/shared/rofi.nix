@@ -10,10 +10,7 @@ in
     enable = true;
     cycle = false;
     font = "Figtree 13";
-<<<<<<< HEAD
     package = pkgs.rofi;
-=======
->>>>>>> 53cb09bc6c6038f6ff5906f4fc221345c4e373ac
     terminal = "${pkgs.zsh}/bin/zsh";
     modes = [ "drun" "calc" "games" ];
 

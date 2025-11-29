@@ -5,7 +5,6 @@
     home-manager.url = "github:nix-community/home-manager";
     nixvim.url = "github:nix-community/nixvim";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    winboat.url = "github:TibixDev/winboat";
   };
 
   outputs = { nixpkgs, ... } @inputs:

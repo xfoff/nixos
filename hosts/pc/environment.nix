@@ -23,7 +23,6 @@
       ${pkgs.glib}/lib:
       ${pkgs.xorg.libxshmfence}/lib:
       ${pkgs.nss}/lib:
-      ${pkgs.nss_3_114}/lib:
       $LD_LIBRARY_PATH
     ";
     GODOT_DISPLAY_DRIVER="wayland";

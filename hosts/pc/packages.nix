@@ -54,7 +54,6 @@
     alsa-lib
     alsa-utils
     alsa-tools
-    aseprite
     arduino-ide
     nix-prefetch-git
     eog
@@ -63,7 +62,7 @@
     godot_4_4-export-templates-bin
     godotPackages_4_4.export-templates-mono-bin
     gnome-themes-extra
-    kdePackages.waylib
+    # kdePackages.waylib
     kdePackages.qt6ct
     kdePackages.qtsvg
     kdePackages.qtvirtualkeyboard
@@ -95,10 +94,12 @@
     protonvpn-gui
     noip
     android-tools
-    android-udev-rules
     openssh
     parted
     noip
+    docker-compose
+    freerdp
+    winboat
     #add new packages above
   ];
 
@@ -108,7 +109,7 @@
   };
 
   #virtualbox
-  programs.virt-manager.enable = true;
+  programs.virt-manager.enable = false;
   virtualisation = {
     libvirtd = {
       enable = true;
@@ -117,13 +118,19 @@
       qemu = {
         swtpm.enable = true;
         runAsRoot = true;
-        ovmf.enable = true;
         vhostUserPackages = [ pkgs.virtiofsd ];
       };
     };
     spiceUSBRedirection.enable = true;
     waydroid.enable = true;
+    docker = {
+      enable = true;
+      enableOnBoot = true;
+    };
   };
+  hardware.nvidia-container-toolkit.enable = true;
+  users.groups.libvirtd.members = ["xfof"];
+
   services.qemuGuest.enable = true;
   services.spice-vdagentd.enable = true;
   systemd.tmpfiles.rules = [ "L+ /var/lib/qemu/firmware - - - - ${pkgs.qemu}/share/qemu/firmware" ];

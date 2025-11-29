@@ -14,7 +14,7 @@
       wayland.enable = true;
       theme = "${import ../shared/sddm.nix { inherit pkgs; }}";
       extraPackages = with pkgs; [
-        kdePackages.waylib
+        # kdePackages.waylib
         kdePackages.qt6ct
         kdePackages.qtsvg
         kdePackages.qtvirtualkeyboard
