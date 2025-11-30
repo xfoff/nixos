@@ -47,8 +47,10 @@
     wayland-scanner
     speechd
     egl-wayland
-    dotnetCorePackages.dotnet_8.sdk
-    dotnetCorePackages.dotnet_8.runtime
+    # dotnetCorePackages.dotnet_8.sdk
+    # dotnetCorePackages.dotnet_8.runtime
+    dotnetCorePackages.dotnet_9.sdk
+    dotnet-runtime_9
     fontconfig
     cargo
     alsa-lib
@@ -88,7 +90,6 @@
     bash
     libreoffice-qt6-fresh
     gowall
-    modrinth-app
     qmk
     wireguard-ui
     protonvpn-gui
@@ -97,9 +98,9 @@
     openssh
     parted
     noip
-    docker-compose
-    freerdp
-    winboat
+    # docker-compose
+    # freerdp
+    # winboat
     #add new packages above
   ];
 
@@ -124,11 +125,11 @@
     spiceUSBRedirection.enable = true;
     waydroid.enable = true;
     docker = {
-      enable = true;
+      enable = false;
       enableOnBoot = true;
     };
   };
-  hardware.nvidia-container-toolkit.enable = true;
+  hardware.nvidia-container-toolkit.enable = false;
   users.groups.libvirtd.members = ["xfof"];
 
   services.qemuGuest.enable = true;

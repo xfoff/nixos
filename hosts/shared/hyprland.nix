@@ -79,7 +79,7 @@ in
             "idleinhibit fullscreen, class:(${app})"
             "renderunfocused, class:(${app})"
           ]
-        ) ["zen-beta" "rofi" "steam_app"])
+        ) ["zen-beta" "zen-twilight" "rofi" "steam_app"])
       );
 
       env = [

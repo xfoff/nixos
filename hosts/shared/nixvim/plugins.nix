@@ -117,11 +117,12 @@
         omnisharp = {
           enable = true;
           settings = {
-            enableEditorConfigSupport = true;
-            enableImportCompletion = true;
-            enableMsBuildLoadProjectsOnDemand = true;
-            sdkIncludePrereleases = true;
+            enableEditorConfigSupport = false;
+            enableImportCompletion = false;
+            enableMsBuildLoadProjectsOnDemand = false;
+            sdkIncludePrereleases = false;
           };
+          filetypes = [ "cs" ];
         };
         cssls.enable = true;
         glsl_analyzer = {
