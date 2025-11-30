@@ -115,13 +115,18 @@
         clangd.enable = true;
         cmake.enable = true;
         omnisharp = {
-          enable = true;
+          enable = false;
           settings = {
             enableEditorConfigSupport = true;
             enableImportCompletion = true;
             enableMsBuildLoadProjectsOnDemand = true;
             sdkIncludePrereleases = true;
           };
+          filetypes = [ "cs" ];
+        };
+        csharp_ls = {
+          enable = true;
+          filetypes = [ "cs" ];
         };
         cssls.enable = true;
         glsl_analyzer = {

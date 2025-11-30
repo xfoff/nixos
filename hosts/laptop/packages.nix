@@ -30,8 +30,8 @@
     steam-run
     mpv
     cmake
-    dotnetCorePackages.dotnet_8.sdk
-    dotnetCorePackages.dotnet_8.runtime
+    dotnetCorePackages.sdk_9_0_3xx-bin
+    dotnetCorePackages.runtime_9_0-bin
     alsa-lib
     alsa-tools
     nix-prefetch-git
@@ -55,7 +55,7 @@
     protonvpn-gui
     # p7zip
     # p7zip-rar
-    docker-compose
+    # docker-compose
     freerdp
     libreoffice
     android-tools
@@ -63,6 +63,7 @@
     android-studio
     qbittorrent
     qbittorrent-cli
+    # winboat
     #add new packages above
   ];
 
@@ -80,7 +81,7 @@
     };
     spiceUSBRedirection.enable = true;
     waydroid.enable = false;
-    docker.enable = true;
+    docker.enable = false;
   };
 
   qt.enable = true;
