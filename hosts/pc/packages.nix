@@ -47,10 +47,8 @@
     wayland-scanner
     speechd
     egl-wayland
-    # dotnetCorePackages.dotnet_8.sdk
-    # dotnetCorePackages.dotnet_8.runtime
-    dotnetCorePackages.dotnet_9.sdk
-    dotnet-runtime_9
+    dotnetCorePackages.sdk_9_0_3xx-bin
+    dotnetCorePackages.runtime_9_0-bin
     fontconfig
     cargo
     alsa-lib
@@ -60,7 +58,7 @@
     nix-prefetch-git
     eog
     meslo-lgs-nf
-    godot_4-mono
+    (godot-mono.overrideAttrs { dotnet-sdk = pkgs.dotnetCorePackages.sdk_9_0_3xx-bin; })
     godot_4_4-export-templates-bin
     godotPackages_4_4.export-templates-mono-bin
     gnome-themes-extra
@@ -98,9 +96,8 @@
     openssh
     parted
     noip
-    # docker-compose
-    # freerdp
-    # winboat
+    freerdp
+    winboat
     #add new packages above
   ];
 
@@ -110,13 +107,14 @@
   };
 
   #virtualbox
-  programs.virt-manager.enable = false;
+  programs.virt-manager.enable = true;
   virtualisation = {
     libvirtd = {
       enable = true;
       nss.enable = true;
       nss.enableGuest = true;
       qemu = {
+        package = pkgs.qemu_kvm;
         swtpm.enable = true;
         runAsRoot = true;
         vhostUserPackages = [ pkgs.virtiofsd ];
@@ -125,8 +123,12 @@
     spiceUSBRedirection.enable = true;
     waydroid.enable = true;
     docker = {
-      enable = false;
+      enable = true;
       enableOnBoot = true;
+    };
+    podman = {
+      enable = false;
+      enableNvidia = true;
     };
   };
   hardware.nvidia-container-toolkit.enable = false;

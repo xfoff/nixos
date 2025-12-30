@@ -30,7 +30,7 @@
     LIBGL_ALWAYS_INDIRECT="0";
     QT_QPA_PLATFORM = "wayland";
     QT_QPA_PLATFORMTHEME = "qt5ct";
-    DOTNET_ROOT = "${pkgs.dotnetCorePackages.dotnet_8.sdk}/share/dotnet/shared/Microsoft.NETCore.App";
+    DOTNET_ROOT = "${pkgs.dotnetCorePackages.sdk_9_0_3xx}/share/dotnet/";
     OLLAMA_MODELS = "/media/disk/aiaiai/";
     DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = "1";
     WEBKIT_DISABLE_DMABUF_RENDERER = "1";

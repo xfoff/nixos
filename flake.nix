@@ -28,13 +28,6 @@
               "dotnet-runtime-7.0.20"
               "dotnet-sdk-6.0.428"
             ];
-            overlays = [
-              (final: prev: {
-                godot-mono = prev.winboat.overrideAttrs (old: {
-                  dotnet-sdk = nixpkgs.dotnetCorePackages.sdk_9_0_3xx-bin;
-                });
-              })
-            ];
           };
           specialArgs = { inherit inputs system; };
         };
