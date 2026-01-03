@@ -53,24 +53,14 @@
     zulu17
     wireguard-ui
     protonvpn-gui
-    # p7zip
-    # p7zip-rar
-    # docker-compose
-    freerdp
-    libreoffice
-    android-tools
     easyeffects
-    android-studio
-    qbittorrent
-    qbittorrent-cli
-    # winboat
     #add new packages above
   ];
 
   programs.virt-manager.enable = true;
   virtualisation = {
     libvirtd = {
-      enable = true;
+      enable = false;
       nss.enable = true;
       nss.enableGuest = true;
       qemu = {
@@ -80,8 +70,6 @@
       };
     };
     spiceUSBRedirection.enable = true;
-    waydroid.enable = false;
-    docker.enable = false;
   };
 
   qt.enable = true;

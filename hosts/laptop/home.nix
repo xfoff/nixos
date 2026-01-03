@@ -9,7 +9,7 @@
   ];
   home.username = "xfof";
   home.homeDirectory = "/home/xfof";
-  home.stateVersion = "25.05";
+  home.stateVersion = "25.11";
 
   programs.zsh.shellAliases = {
     pkgs = "nvim /etc/nixos/hosts/laptop/packages.nix";

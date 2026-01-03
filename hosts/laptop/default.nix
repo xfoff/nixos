@@ -11,7 +11,6 @@
     ./environment.nix
     ./graphics.nix
     ../shared/system.nix
-    ./disks.nix
     ../shared/keyboard.nix
     ../shared/nixvim/nixvim.nix
     ./hardware-configuration.nix

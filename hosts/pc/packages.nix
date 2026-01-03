@@ -98,6 +98,7 @@
     noip
     freerdp
     winboat
+    modrinth-app
     #add new packages above
   ];
 
